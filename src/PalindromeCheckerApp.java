@@ -1,11 +1,20 @@
 public class PalindromeCheckerApp {
-    public static void main (String[] args){
-        System.out.println("   Welcome to Palindrome Checker  ");
+    public static void main(String[] args) {
 
-        System.out.println("Application Name : Palindrome Checker App");
-        System.out.println("Application Version : 1.0");
+        String word = "madam";
 
-        System.out.println("Application initialized successfully.");
-        System.out.println("Ready to proceed to palindrome check.");
+        String reversed = "";
+
+        for (int i = word.length() - 1; i >= 0; i--) {
+            reversed = reversed + word.charAt(i);
+        }
+
+        if (word.equals(reversed)) {
+            System.out.println("The word \"" + word + "\" is a Palindrome.");
+        } else {
+            System.out.println("The word \"" + word + "\" is NOT a Palindrome.");
+        }
+
+        System.out.println("Program executed successfully.");
     }
 }
